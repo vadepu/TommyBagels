@@ -1,0 +1,250 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<script src="./support.js"></script>
+</head>
+<body>
+<x-dc>
+<helmet>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Bagel+Fat+One&family=Familjen+Grotesk:wght@400;500;600;700&family=JetBrains+Mono:wght@500;700&display=swap" rel="stylesheet">
+<script src="./image-slot.js"></script>
+<style>
+body{margin:0;background:#f6efe0;color:#2a1d14;font-family:'Familjen Grotesk',sans-serif;-webkit-font-smoothing:antialiased}
+a{color:#c7432b;text-decoration:none}a:hover{color:#2a1d14}
+@keyframes tb-marquee{from{transform:translateX(0)}to{transform:translateX(-50%)}}
+@keyframes tb-spin{to{transform:rotate(360deg)}}
+@keyframes tb-pulse{0%,100%{opacity:1}50%{opacity:.35}}
+</style>
+</helmet>
+
+<div style="min-height:100vh;background:#f6efe0;overflow-x:hidden">
+
+<header style="position:sticky;top:0;z-index:20;background:#f6efe0;border-bottom:2px solid #2a1d14">
+  <div style="max-width:1320px;margin:0 auto;padding:14px clamp(16px,4vw,40px);display:flex;align-items:center;justify-content:space-between;gap:20px;flex-wrap:wrap">
+    <a href="#top" style="display:flex;align-items:baseline;gap:8px;color:#2a1d14">
+      <span style="font-family:'Bagel Fat One',cursive;font-size:30px;line-height:1;letter-spacing:-0.01em">Tommy's</span>
+      <span style="font-family:'JetBrains Mono',monospace;font-size:11px;font-weight:700;letter-spacing:.14em;text-transform:uppercase">Bagels · Manalapan NJ</span>
+    </a>
+    <nav style="display:flex;align-items:center;gap:clamp(14px,2.4vw,32px);font-weight:600;font-size:15px;flex-wrap:wrap">
+      <a href="#menu" style="color:#2a1d14" style-hover="color:#c7432b">Menu</a>
+      <a href="#flavors" style="color:#2a1d14" style-hover="color:#c7432b">Flavors</a>
+      <a href="#visit" style="color:#2a1d14" style-hover="color:#c7432b">Visit</a>
+      <a href="tel:+17324314490" style="color:#2a1d14;font-family:'JetBrains Mono',monospace;font-size:13px" style-hover="color:#c7432b">(732) 431-4490</a>
+      <a href="https://www.doordash.com/store/tommy's-bagels-manalapan-township-30977001" target="_blank" style="background:#c7432b;color:#f6efe0;padding:11px 18px;border-radius:999px;border:2px solid #2a1d14;box-shadow:3px 3px 0 #2a1d14" style-hover="color:#f6efe0;transform:translate(-1px,-1px);box-shadow:4px 4px 0 #2a1d14">Order Online →</a>
+    </nav>
+  </div>
+</header>
+
+<section id="top" data-screen-label="Hero" style="max-width:1320px;margin:0 auto;padding:clamp(32px,6vw,72px) clamp(16px,4vw,40px) clamp(40px,6vw,80px);display:grid;grid-template-columns:repeat(auto-fit,minmax(min(100%,460px),1fr));gap:clamp(32px,5vw,64px);align-items:center">
+  <div style="display:flex;flex-direction:column;gap:28px">
+    <div style="display:inline-flex;align-self:flex-start;align-items:center;gap:10px;border:2px solid #2a1d14;border-radius:999px;padding:7px 14px 7px 10px;background:#fffaf0;font-family:'JetBrains Mono',monospace;font-size:12px;font-weight:700;letter-spacing:.08em;text-transform:uppercase">
+      {{ statusDot }}
+      <span>{{ statusText }}</span>
+    </div>
+    <h1 style="margin:0;font-family:'Bagel Fat One',cursive;font-weight:400;font-size:clamp(56px,9vw,128px);line-height:.88;letter-spacing:-0.02em;color:#2a1d14;text-wrap:balance">Hot out of the oven<span style="color:#c7432b"> since 6&nbsp;AM.</span></h1>
+    <p style="margin:0;max-width:520px;font-size:clamp(18px,1.6vw,21px);line-height:1.45;text-wrap:pretty">Big, chewy, crisp-on-the-outside bagels and bialys, baked in-house every morning on Route 33. Boar's Head deli, real schmears, and a pork roll, egg &amp; cheese worth the drive.</p>
+    <div style="display:flex;gap:12px;flex-wrap:wrap">
+      <a href="#menu" style="background:#2a1d14;color:#f6efe0;padding:16px 26px;border-radius:999px;font-weight:700;font-size:17px;border:2px solid #2a1d14" style-hover="background:#c7432b;color:#f6efe0">See the menu</a>
+      <a href="#visit" style="background:transparent;color:#2a1d14;padding:16px 26px;border-radius:999px;font-weight:700;font-size:17px;border:2px solid #2a1d14" style-hover="background:#fffaf0;color:#2a1d14">Get directions</a>
+    </div>
+    <div style="display:flex;gap:clamp(20px,4vw,48px);flex-wrap:wrap;padding-top:8px;border-top:2px dashed #2a1d1455">
+      <div style="display:flex;flex-direction:column;gap:2px;padding-top:16px"><span style="font-family:'Bagel Fat One',cursive;font-size:34px;line-height:1">#1</span><span style="font-size:14px;font-weight:500">Restaurant in Englishtown on Tripadvisor</span></div>
+      <div style="display:flex;flex-direction:column;gap:2px;padding-top:16px"><span style="font-family:'Bagel Fat One',cursive;font-size:34px;line-height:1">7 days</span><span style="font-size:14px;font-weight:500">Doors open at 6:00 AM</span></div>
+    </div>
+  </div>
+  <div style="position:relative;aspect-ratio:1/1.05;width:100%">
+    <div style="position:absolute;inset:0 0 8% 10%;border:2px solid #2a1d14;border-radius:28px;overflow:hidden;background:#e8dcc3;box-shadow:10px 10px 0 #2a1d14">
+      <image-slot id="hero-main" shape="rect" placeholder="Drop a photo: fresh bagels on the rack"></image-slot>
+    </div>
+    <div style="position:absolute;left:0;bottom:0;width:44%;aspect-ratio:1;border:2px solid #2a1d14;border-radius:50%;overflow:hidden;background:#e8dcc3;box-shadow:6px 6px 0 #2a1d14">
+      <image-slot id="hero-sandwich" shape="circle" placeholder="Pork roll, egg & cheese"></image-slot>
+    </div>
+    <div style="position:absolute;right:-8px;top:-18px;width:clamp(110px,13vw,150px);aspect-ratio:1;pointer-events:none">
+      {{ badge }}
+    </div>
+  </div>
+</section>
+
+<sc-if value="{{ showMarquee }}" hint-placeholder-val="{{ true }}">
+<div style="background:#2a1d14;color:#f6efe0;border-top:2px solid #2a1d14;border-bottom:2px solid #2a1d14;overflow:hidden;padding:18px 0">
+  {{ marquee }}
+</div>
+</sc-if>
+
+<section id="menu" data-screen-label="Menu" style="max-width:1320px;margin:0 auto;padding:clamp(56px,8vw,112px) clamp(16px,4vw,40px)">
+  <div style="display:flex;justify-content:space-between;align-items:flex-end;gap:24px;flex-wrap:wrap;margin-bottom:40px">
+    <div style="display:flex;flex-direction:column;gap:12px">
+      <span style="font-family:'JetBrains Mono',monospace;font-size:12px;font-weight:700;letter-spacing:.16em;text-transform:uppercase;color:#c7432b">The counter</span>
+      <h2 style="margin:0;font-family:'Bagel Fat One',cursive;font-weight:400;font-size:clamp(44px,6vw,80px);line-height:.92;letter-spacing:-0.01em">What's good today</h2>
+    </div>
+    <div style="display:flex;gap:6px;padding:5px;border:2px solid #2a1d14;border-radius:999px;background:#fffaf0;flex-wrap:wrap">
+      <sc-for list="{{ tabs }}" as="t" hint-placeholder-count="3">
+        <button onClick="{{ t.onClick }}" style="font-family:'Familjen Grotesk',sans-serif;font-weight:700;font-size:15px;padding:10px 18px;border-radius:999px;border:none;cursor:pointer;background:{{ t.bg }};color:{{ t.fg }}">{{ t.label }}</button>
+      </sc-for>
+    </div>
+  </div>
+  <div style="display:grid;grid-template-columns:repeat(auto-fill,minmax(min(100%,300px),1fr));gap:16px">
+    <sc-for list="{{ items }}" as="it" hint-placeholder-count="6">
+      <div style="background:#fffaf0;border:2px solid #2a1d14;border-radius:20px;padding:22px 22px 20px;display:flex;flex-direction:column;gap:10px;min-height:150px" style-hover="box-shadow:6px 6px 0 #2a1d14;transform:translate(-2px,-2px)">
+        <div style="display:flex;justify-content:space-between;align-items:baseline;gap:12px">
+          <h3 style="margin:0;font-size:22px;font-weight:700;line-height:1.15;letter-spacing:-0.01em">{{ it.name }}</h3>
+          <span style="font-family:'JetBrains Mono',monospace;font-weight:700;font-size:15px;color:#c7432b;white-space:nowrap">{{ it.price }}</span>
+        </div>
+        <p style="margin:0;font-size:15px;line-height:1.45;color:#5a4636;text-wrap:pretty">{{ it.desc }}</p>
+        <sc-if value="{{ it.tag }}" hint-placeholder-val="{{ false }}">
+          <span style="margin-top:auto;align-self:flex-start;font-family:'JetBrains Mono',monospace;font-size:11px;font-weight:700;letter-spacing:.1em;text-transform:uppercase;background:#f2c14e;border:1.5px solid #2a1d14;border-radius:999px;padding:4px 10px">{{ it.tag }}</span>
+        </sc-if>
+      </div>
+    </sc-for>
+  </div>
+  <p style="margin:28px 0 0;font-size:14px;color:#5a4636">Prices reflect online ordering and may differ in store. Full menu at the counter — ask about the daily specials.</p>
+</section>
+
+<section id="flavors" data-screen-label="Flavors" style="background:#c7432b;color:#fffaf0;border-top:2px solid #2a1d14;border-bottom:2px solid #2a1d14">
+  <div style="max-width:1320px;margin:0 auto;padding:clamp(56px,8vw,112px) clamp(16px,4vw,40px);display:grid;grid-template-columns:repeat(auto-fit,minmax(min(100%,420px),1fr));gap:clamp(32px,6vw,80px);align-items:center">
+    <div style="display:flex;flex-direction:column;gap:20px">
+      <span style="font-family:'JetBrains Mono',monospace;font-size:12px;font-weight:700;letter-spacing:.16em;text-transform:uppercase;color:#2a1d14">Baked in-house, daily</span>
+      <h2 style="margin:0;font-family:'Bagel Fat One',cursive;font-weight:400;font-size:clamp(44px,6vw,84px);line-height:.92">Pick your bagel.<br>Pick your side.</h2>
+      <p style="margin:0;max-width:460px;font-size:19px;line-height:1.45;color:#fffaf0;text-wrap:pretty">Some folks swear by it plain and warm — no toast, no schmear. Others need the works. We don't judge. (We do judge toasting a fresh one.)</p>
+    </div>
+    <div style="display:flex;flex-wrap:wrap;gap:10px">
+      <sc-for list="{{ flavors }}" as="f" hint-placeholder-count="12">
+        <span style="font-size:clamp(18px,1.8vw,24px);font-weight:700;padding:12px 20px;border-radius:999px;border:2px solid #2a1d14;background:{{ f.bg }};color:#2a1d14;box-shadow:3px 3px 0 #2a1d14">{{ f.name }}</span>
+      </sc-for>
+    </div>
+  </div>
+</section>
+
+<section data-screen-label="Reviews" style="max-width:1320px;margin:0 auto;padding:clamp(56px,8vw,112px) clamp(16px,4vw,40px)">
+  <span style="display:block;font-family:'JetBrains Mono',monospace;font-size:12px;font-weight:700;letter-spacing:.16em;text-transform:uppercase;color:#c7432b;margin-bottom:28px">Word on Route 33</span>
+  <div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(min(100%,320px),1fr));gap:clamp(24px,4vw,48px)">
+    <figure style="margin:0;display:flex;flex-direction:column;gap:16px;border-top:2px solid #2a1d14;padding-top:24px">
+      <blockquote style="margin:0;font-family:'Bagel Fat One',cursive;font-size:clamp(28px,3vw,40px);line-height:1.05">"Best bagel in Jersey. Will argue with a wall."</blockquote>
+      <figcaption style="font-family:'JetBrains Mono',monospace;font-size:12px;letter-spacing:.08em;text-transform:uppercase;color:#5a4636">— Local regular</figcaption>
+    </figure>
+    <figure style="margin:0;display:flex;flex-direction:column;gap:16px;border-top:2px solid #2a1d14;padding-top:24px">
+      <blockquote style="margin:0;font-family:'Bagel Fat One',cursive;font-size:clamp(28px,3vw,40px);line-height:1.05">"Big thick chewy bagels. Still the best around."</blockquote>
+      <figcaption style="font-family:'JetBrains Mono',monospace;font-size:12px;letter-spacing:.08em;text-transform:uppercase;color:#5a4636">— Tripadvisor review</figcaption>
+    </figure>
+    <figure style="margin:0;display:flex;flex-direction:column;gap:16px;border-top:2px solid #2a1d14;padding-top:24px">
+      <blockquote style="margin:0;font-family:'Bagel Fat One',cursive;font-size:clamp(28px,3vw,40px);line-height:1.05;color:#c7432b">"Best blueberry bagel in NJ, hands down."</blockquote>
+      <figcaption style="font-family:'JetBrains Mono',monospace;font-size:12px;letter-spacing:.08em;text-transform:uppercase;color:#5a4636">— Blueberry loyalist</figcaption>
+    </figure>
+  </div>
+</section>
+
+<section id="visit" data-screen-label="Visit" style="background:#2a1d14;color:#f6efe0">
+  <div style="max-width:1320px;margin:0 auto;padding:clamp(56px,8vw,112px) clamp(16px,4vw,40px);display:grid;grid-template-columns:repeat(auto-fit,minmax(min(100%,380px),1fr));gap:clamp(32px,5vw,64px)">
+    <div style="display:flex;flex-direction:column;gap:32px">
+      <h2 style="margin:0;font-family:'Bagel Fat One',cursive;font-weight:400;font-size:clamp(44px,6vw,84px);line-height:.92;color:#f6efe0">Come<br>hungry.</h2>
+      <div style="display:flex;flex-direction:column;gap:6px">
+        <span style="font-family:'JetBrains Mono',monospace;font-size:12px;font-weight:700;letter-spacing:.16em;text-transform:uppercase;color:#f2c14e">Find us</span>
+        <a href="https://maps.apple.com/?q=130+NJ-33+Unit+6+Manalapan+NJ+07726" target="_blank" style="color:#f6efe0;font-size:24px;font-weight:600;line-height:1.3" style-hover="color:#f2c14e">130 NJ-33, Unit 6<br>Manalapan, NJ 07726</a>
+      </div>
+      <div style="display:flex;flex-direction:column;gap:6px">
+        <span style="font-family:'JetBrains Mono',monospace;font-size:12px;font-weight:700;letter-spacing:.16em;text-transform:uppercase;color:#f2c14e">Call ahead</span>
+        <a href="tel:+17324314490" style="color:#f6efe0;font-size:24px;font-weight:600" style-hover="color:#f2c14e">(732) 431-4490</a>
+      </div>
+      <div style="display:flex;flex-direction:column;gap:10px">
+        <span style="font-family:'JetBrains Mono',monospace;font-size:12px;font-weight:700;letter-spacing:.16em;text-transform:uppercase;color:#f2c14e">Hours</span>
+        <sc-for list="{{ hours }}" as="h" hint-placeholder-count="2">
+          <div style="display:flex;justify-content:space-between;gap:16px;max-width:380px;padding:10px 0;border-bottom:1px dashed #f6efe055;font-size:18px;font-weight:{{ h.weight }};color:{{ h.color }}">
+            <span>{{ h.days }}</span><span style="font-family:'JetBrains Mono',monospace;font-size:16px">{{ h.time }}</span>
+          </div>
+        </sc-for>
+      </div>
+    </div>
+    <div style="display:grid;grid-template-rows:minmax(260px,1fr) auto;gap:16px">
+      <div style="border:2px solid #f6efe0;border-radius:24px;overflow:hidden;background:#3a2a1f;min-height:260px">
+        <image-slot id="storefront" shape="rect" placeholder="Drop a storefront photo"></image-slot>
+      </div>
+      <div style="display:flex;gap:12px;flex-wrap:wrap">
+        <a href="https://maps.apple.com/?q=130+NJ-33+Unit+6+Manalapan+NJ+07726" target="_blank" style="flex:1;min-width:180px;text-align:center;background:#f6efe0;color:#2a1d14;padding:16px 22px;border-radius:999px;font-weight:700;font-size:17px" style-hover="background:#f2c14e;color:#2a1d14">Directions</a>
+        <a href="https://www.doordash.com/store/tommy's-bagels-manalapan-township-30977001" target="_blank" style="flex:1;min-width:180px;text-align:center;background:#c7432b;color:#fffaf0;padding:16px 22px;border-radius:999px;font-weight:700;font-size:17px;border:2px solid #f6efe0" style-hover="background:#f2c14e;color:#2a1d14">Order on DoorDash</a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<footer style="background:#f6efe0;border-top:2px solid #2a1d14">
+  <div style="max-width:1320px;margin:0 auto;padding:clamp(40px,6vw,72px) clamp(16px,4vw,40px) 28px;display:flex;flex-direction:column;gap:24px">
+    <div style="font-family:'Bagel Fat One',cursive;font-size:clamp(72px,17vw,240px);line-height:.8;letter-spacing:-0.03em;color:#2a1d14">Tommy's<span style="color:#c7432b">.</span></div>
+    <div style="display:flex;justify-content:space-between;gap:16px;flex-wrap:wrap;font-family:'JetBrains Mono',monospace;font-size:12px;letter-spacing:.06em;text-transform:uppercase;color:#5a4636">
+      <span>Fresh bagels · Bialys · Boar's Head deli</span>
+      <span>© 2026 Tommy's Bagels, Manalapan NJ</span>
+    </div>
+  </div>
+</footer>
+
+</div>
+</x-dc>
+<script type="text/x-dc" data-dc-script data-props="{&quot;showMarquee&quot;:{&quot;editor&quot;:&quot;boolean&quot;,&quot;default&quot;:true,&quot;tsType&quot;:&quot;boolean&quot;,&quot;section&quot;:&quot;Layout&quot;},&quot;accent&quot;:{&quot;editor&quot;:&quot;color&quot;,&quot;default&quot;:&quot;#c7432b&quot;,&quot;options&quot;:[&quot;#c7432b&quot;,&quot;#2f6b4f&quot;,&quot;#1f4e8c&quot;],&quot;tsType&quot;:&quot;string&quot;,&quot;section&quot;:&quot;Badge&quot;}}">
+class Component extends DCLogic {
+  state = { tab: 'breakfast', now: new Date() };
+  componentDidMount() { this.t = setInterval(() => this.setState({ now: new Date() }), 60000); }
+  componentWillUnmount() { clearInterval(this.t); }
+  menu = {
+    breakfast: [
+      { name: 'Pork Roll, Egg & Cheese', price: '', desc: 'The Jersey classic on a plain bagel — or any bagel you want. Salt, pepper, ketchup on request.', tag: 'Jersey essential' },
+      { name: 'Bagel with Egg & Cheese', price: '$6.50', desc: 'Fluffy eggs, melted American, on a bagel still warm from the oven.' },
+      { name: 'Mexican Grande', price: '$8.00', desc: 'A big, bold breakfast sandwich with a kick. Bring napkins.', tag: 'Fan favorite' },
+      { name: 'Bacon, Egg & Cheese', price: '', desc: 'Crispy bacon, eggs and cheese — the reason you set an alarm.' },
+    ],
+    spreads: [
+      { name: 'Bagel with Cream Cheese', price: '$4.00', desc: 'Thick, chewy, crisp outside. Plain or a flavored schmear.' },
+      { name: 'Bagel with Cox Spread', price: '$6.00', desc: 'A house-favorite spread that regulars order by name.' },
+      { name: 'Onion Bagel, Lox & Capers', price: '', desc: 'Silky lox, cream cheese, capers on a fresh onion bagel.', tag: 'Customer pick' },
+      { name: 'Bialy with Whitefish', price: '', desc: 'Whitefish salad and tomato on a fresh-baked bialy.' },
+    ],
+    lunch: [
+      { name: 'Bagel with Tuna', price: '$7.00', desc: 'Classic deli tuna salad, lettuce, tomato on your bagel.' },
+      { name: 'Bagel with Chicken Salad', price: '$7.00', desc: 'House chicken salad, piled high.' },
+      { name: "Boar's Head Deli Sandwich", price: '', desc: "Premium Boar's Head cold cuts, sliced to order. Pick your bagel, roll or bread.", tag: "Boar's Head" },
+      { name: 'Turkey & Avocado', price: '', desc: 'Sliced turkey and fresh avocado on a toasted everything.' },
+    ],
+  };
+  renderVals() {
+    const accent = this.props.accent ?? '#c7432b';
+    const now = this.state.now, d = now.getDay(), h = now.getHours() + now.getMinutes() / 60;
+    const close = d === 0 ? 14 : 15, open = h >= 6 && h < close;
+    const closeLabel = d === 0 ? '2 PM' : '3 PM';
+    const statusText = open ? `Open now · until ${closeLabel}` : (h < 6 ? 'Opens today at 6 AM' : 'Closed · opens 6 AM tomorrow');
+    const statusDot = React.createElement('span', { style: { width: 10, height: 10, borderRadius: '50%', background: open ? '#3f9d4b' : accent, animation: open ? 'tb-pulse 1.6s ease-in-out infinite' : 'none' } });
+
+    const words = ['Everything', 'Sesame', 'Blueberry', 'Pork Roll', 'Bialys', 'Cinnamon Raisin', 'Onion', "Boar's Head", 'Poppy', 'Whole Wheat'];
+    const run = words.flatMap((w, i) => [
+      React.createElement('span', { key: 'w' + i, style: { fontFamily: "'Bagel Fat One',cursive", fontSize: 'clamp(28px,3.4vw,44px)', lineHeight: 1, whiteSpace: 'nowrap' } }, w),
+      React.createElement('span', { key: 'd' + i, style: { width: 18, height: 18, borderRadius: '50%', border: '5px solid #f2c14e', flex: 'none' } }),
+    ]);
+    const marquee = React.createElement('div', { style: { display: 'flex', width: 'max-content', animation: 'tb-marquee 38s linear infinite' } },
+      [0, 1].map(k => React.createElement('div', { key: k, style: { display: 'flex', alignItems: 'center', gap: 32, paddingRight: 32 } }, run)));
+
+    const ringText = 'FRESH DAILY · BAKED IN-HOUSE · FRESH DAILY · BAKED IN-HOUSE · ';
+    const badge = React.createElement('div', { style: { width: '100%', height: '100%', borderRadius: '50%', background: '#f2c14e', border: '2px solid #2a1d14', position: 'relative', boxShadow: '4px 4px 0 #2a1d14' } },
+      React.createElement('svg', { viewBox: '0 0 100 100', style: { position: 'absolute', inset: 0, width: '100%', height: '100%', animation: 'tb-spin 22s linear infinite' } },
+        React.createElement('defs', null, React.createElement('path', { id: 'tbring', d: 'M50,50 m-37,0 a37,37 0 1,1 74,0 a37,37 0 1,1 -74,0' })),
+        React.createElement('text', { style: { fontFamily: "'JetBrains Mono',monospace", fontSize: 8.4, fontWeight: 700, letterSpacing: 1.2, fill: '#2a1d14' } },
+          React.createElement('textPath', { href: '#tbring' }, ringText))),
+      React.createElement('div', { style: { position: 'absolute', inset: 0, display: 'grid', placeItems: 'center', fontFamily: "'Bagel Fat One',cursive", fontSize: 'clamp(26px,3vw,34px)', color: accent } }, '6AM'));
+
+    const tabDefs = [['breakfast', 'Breakfast'], ['spreads', 'Bagels & Spreads'], ['lunch', 'Deli & Lunch']];
+    const tabs = tabDefs.map(([id, label]) => ({ label, bg: this.state.tab === id ? '#2a1d14' : 'transparent', fg: this.state.tab === id ? '#f6efe0' : '#2a1d14', onClick: () => this.setState({ tab: id }) }));
+    const items = this.menu[this.state.tab];
+
+    const fl = ['Plain', 'Everything', 'Sesame', 'Poppy', 'Onion', 'Garlic', 'Salt', 'Pumpernickel', 'Whole Wheat', 'Cinnamon Raisin', 'Blueberry', 'Bialy'];
+    const flavors = fl.map((name, i) => ({ name, bg: i % 5 === 0 ? '#f2c14e' : '#fffaf0' }));
+
+    const hours = [
+      { days: 'Monday – Saturday', time: '6:00 AM – 3:00 PM', on: d !== 0 },
+      { days: 'Sunday', time: '6:00 AM – 2:00 PM', on: d === 0 },
+    ].map(x => ({ ...x, weight: x.on ? 700 : 400, color: x.on ? '#f2c14e' : '#f6efe0' }));
+
+    return { statusText, statusDot, marquee, badge, tabs, items, flavors, hours, showMarquee: this.props.showMarquee ?? true };
+  }
+}
+</script>
+</body>
+</html>

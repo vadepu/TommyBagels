@@ -1,0 +1,388 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<script src="./support.js"></script>
+</head>
+<body>
+<x-dc>
+<helmet>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Bagel+Fat+One&amp;family=Familjen+Grotesk:wght@400;500;600;700&amp;family=JetBrains+Mono:wght@500;700&amp;display=swap" rel="stylesheet">
+<script src="./image-slot.js"></script>
+<style>
+body{margin:0;background:#16307a;color:#ffffff;font-family:'Familjen Grotesk',sans-serif;-webkit-font-smoothing:antialiased}
+a{color:#ffc629;text-decoration:none}a:hover{color:#d94a2b}
+@keyframes tb-marquee{from{transform:translateX(0)}to{transform:translateX(-50%)}}
+@keyframes tb-spin{to{transform:rotate(360deg)}}
+@keyframes tb-pulse{0%,100%{opacity:1}50%{opacity:.35}}
+@keyframes tb-glow{0%,100%{opacity:.55}50%{opacity:.85}}
+</style>
+</helmet>
+
+<div style="min-height:100vh;background:#16307a;overflow-x:hidden">
+
+<header style="position:sticky;top:0;z-index:20;background:#16307af2;backdrop-filter:blur(8px);border-bottom:1px solid #3b58a8">
+  <div style="max-width:1320px;margin:0 auto;padding:14px clamp(16px,4vw,40px);display:flex;align-items:center;justify-content:space-between;gap:20px;flex-wrap:wrap">
+    <a href="#top" style="display:flex;align-items:baseline;gap:10px;color:#ffc629">
+      <span style="font-family:'Bagel Fat One',cursive;font-size:30px;line-height:1">Tommy's</span>
+      <span style="font-family:'JetBrains Mono',monospace;font-size:11px;font-weight:700;letter-spacing:.14em;text-transform:uppercase;color:#ffffff">Bagels &amp; Bialys</span>
+    </a>
+    <nav style="display:flex;align-items:center;gap:clamp(14px,2.4vw,32px);font-weight:600;font-size:15px;flex-wrap:wrap">
+      <a href="#menu" style="color:#ffffff" style-hover="color:#ffc629">Menu</a>
+      <a href="#flavors" style="color:#ffffff" style-hover="color:#ffc629">Flavors</a>
+      <a href="#catering" style="color:#ffffff" style-hover="color:#ffc629">Catering</a>
+      <a href="#locations" style="color:#ffffff" style-hover="color:#ffc629">Locations</a>
+      <div style="display:flex;gap:8px">
+        <a href="https://www.instagram.com/tommys.bagels/" target="_blank" aria-label="Instagram" style="width:38px;height:38px;border-radius:50%;border:1px solid #3b58a8;display:grid;place-items:center;color:#ffffff" style-hover="background:#ffc629;color:#16307a;border-color:#ffc629"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="3" y="3" width="18" height="18" rx="5"></rect><circle cx="12" cy="12" r="4"></circle><circle cx="17.5" cy="6.5" r="1.2" fill="currentColor" stroke="none"></circle></svg></a>
+        <a href="https://www.tiktok.com/@tommysbagels" target="_blank" aria-label="TikTok" style="width:38px;height:38px;border-radius:50%;border:1px solid #3b58a8;display:grid;place-items:center;color:#ffffff" style-hover="background:#ffc629;color:#16307a;border-color:#ffc629"><svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor"><path d="M12.53.02C13.84 0 15.14.01 16.44 0c.08 1.53.63 3.09 1.75 4.17 1.12 1.11 2.7 1.62 4.24 1.79v4.03c-1.44-.05-2.89-.35-4.2-.97-.57-.26-1.1-.59-1.62-.93-.01 2.92.01 5.84-.02 8.75-.08 1.4-.54 2.79-1.35 3.94-1.31 1.92-3.58 3.17-5.91 3.21-1.43.08-2.86-.31-4.08-1.03-2.02-1.19-3.44-3.37-3.65-5.71-.02-.5-.03-1-.01-1.49.18-1.9 1.12-3.72 2.58-4.96 1.66-1.44 3.98-2.13 6.15-1.72.02 1.48-.04 2.96-.04 4.44-.99-.32-2.15-.23-3.02.37-.63.41-1.11 1.04-1.36 1.75-.21.51-.15 1.07-.14 1.61.24 1.64 1.82 3.02 3.5 2.87 1.12-.01 2.19-.66 2.77-1.61.19-.33.4-.67.41-1.06.1-1.79.06-3.57.07-5.36.01-4.03-.01-8.05.02-12.07z"></path></svg></a>
+      </div>
+      <a href="https://www.doordash.com/store/tommy's-bagels-manalapan-township-30977001" target="_blank" style="background:#ffc629;color:#16307a;padding:11px 20px;border-radius:999px" style-hover="background:#ffffff;color:#16307a">Order Online</a>
+    </nav>
+  </div>
+</header>
+
+<section id="top" data-screen-label="Hero" style="position:relative;max-width:1320px;margin:0 auto;padding:clamp(40px,6vw,80px) clamp(16px,4vw,40px) clamp(56px,7vw,96px);display:grid;grid-template-columns:repeat(auto-fit,minmax(min(100%,460px),1fr));gap:clamp(36px,5vw,72px);align-items:center">
+  <div style="display:flex;flex-direction:column;gap:28px;position:relative;z-index:1">
+    <div style="display:inline-flex;align-self:flex-start;align-items:center;gap:10px;border:1px solid #3b58a8;border-radius:999px;padding:8px 16px 8px 12px;background:#1f3c8f;font-family:'JetBrains Mono',monospace;font-size:12px;font-weight:700;letter-spacing:.08em;text-transform:uppercase;color:#ffffff">
+      {{ statusDot }}
+      <span>{{ statusText }}</span>
+    </div>
+    <h1 style="margin:0;font-family:'Bagel Fat One',cursive;font-weight:400;font-size:clamp(60px,9.5vw,136px);line-height:.86;letter-spacing:-0.02em;color:#ffffff;text-wrap:balance">Original Brooklyn <span style="color:#ffc629">bagels.</span></h1>
+    <p style="margin:0;max-width:520px;font-size:clamp(18px,1.6vw,21px);line-height:1.5;color:#f4efe4;text-wrap:pretty">Big, chewy, crackly-crusted bagels and bialys, baked in-house every morning in Manalapan. Boar's Head deli, real schmears, and a pork roll, egg &amp; cheese worth setting an alarm for.</p>
+    <div style="display:flex;gap:12px;flex-wrap:wrap">
+      <a href="https://www.doordash.com/store/tommy's-bagels-manalapan-township-30977001" target="_blank" style="background:#ffc629;color:#16307a;padding:17px 28px;border-radius:999px;font-weight:700;font-size:17px" style-hover="background:#ffffff;color:#16307a">Order for pickup</a>
+      <a href="#menu" style="background:transparent;color:#ffffff;padding:17px 28px;border-radius:999px;font-weight:700;font-size:17px;border:2px solid #ffffff" style-hover="background:#ffffff;color:#16307a">See the menu</a>
+    </div>
+    <div style="display:flex;gap:clamp(24px,4vw,56px);flex-wrap:wrap;padding-top:22px;border-top:1px solid #3b58a8">
+      <div style="display:flex;flex-direction:column;gap:4px"><span style="font-family:'Bagel Fat One',cursive;font-size:36px;line-height:1;color:#ffc629">2</span><span style="font-size:14px;color:#f4efe4">Manalapan locations</span></div>
+      <div style="display:flex;flex-direction:column;gap:4px"><span style="font-family:'Bagel Fat One',cursive;font-size:36px;line-height:1;color:#ffc629">5:30<span style="font-size:20px"> AM</span></span><span style="font-size:14px;color:#f4efe4">First batch, every day</span></div>
+      <div style="display:flex;flex-direction:column;gap:4px"><span style="font-family:'Bagel Fat One',cursive;font-size:36px;line-height:1;color:#ffc629">Kosher</span><span style="font-size:14px;color:#f4efe4">at Yorktowne Plaza</span></div>
+    </div>
+  </div>
+  <div style="position:relative;aspect-ratio:1/1.08;width:100%">
+    <div style="position:absolute;inset:6% 4% 10% 8%;border-radius:50%;background:#3f6be0;filter:blur(80px);animation:tb-glow 5s ease-in-out infinite;pointer-events:none"></div>
+    <div style="position:absolute;inset:0 0 9% 12%;border-radius:32px;overflow:hidden;background:#1f3c8f;border:1px solid #3b58a8">
+      <image-slot id="v2-hero-main" shape="rect" placeholder="Drop a photo: bagels fresh out of the oven" src="images/bagel-rack.jpg"></image-slot>
+    </div>
+    <div style="position:absolute;left:0;bottom:0;width:42%;aspect-ratio:1;border-radius:50%;overflow:hidden;background:#1f3c8f;border:6px solid #16307a">
+      <image-slot id="v2-hero-sandwich" shape="circle" placeholder="Pork roll, egg &amp; cheese" src="images/porkroll-1.jpg"></image-slot>
+    </div>
+    <div style="position:absolute;right:-10px;top:-20px;width:clamp(120px,14vw,160px);aspect-ratio:1;pointer-events:none">
+      {{ badge }}
+    </div>
+  </div>
+</section>
+
+
+
+<section id="menu" data-screen-label="Menu" style="background:#ffffff;color:#16307a">
+  <div style="max-width:1320px;margin:0 auto;padding:clamp(64px,8vw,120px) clamp(16px,4vw,40px)">
+    <div style="display:flex;justify-content:space-between;align-items:flex-end;gap:24px;flex-wrap:wrap;margin-bottom:44px">
+      <div style="display:flex;flex-direction:column;gap:12px">
+        <span style="font-family:'JetBrains Mono',monospace;font-size:12px;font-weight:700;letter-spacing:.16em;text-transform:uppercase;color:#d94a2b">The counter</span>
+        <h2 style="margin:0;font-family:'Bagel Fat One',cursive;font-weight:400;font-size:clamp(46px,6vw,84px);line-height:.92;color:#16307a">What are you<br>craving?</h2>
+      </div>
+      <div style="display:flex;gap:6px;padding:6px;border-radius:999px;background:#f4efe4;flex-wrap:wrap">
+        <sc-for list="{{ tabs }}" as="t" hint-placeholder-count="3">
+          <button onClick="{{ t.onClick }}" style="font-family:'Familjen Grotesk',sans-serif;font-weight:700;font-size:15px;padding:11px 20px;border-radius:999px;border:none;cursor:pointer;background:{{ t.bg }};color:{{ t.fg }}">{{ t.label }}</button>
+        </sc-for>
+      </div>
+    </div>
+    <div style="display:grid;grid-template-columns:repeat(auto-fill,minmax(min(100%,290px),1fr));gap:20px">
+      <sc-for list="{{ items }}" as="it" hint-placeholder-count="4">
+        <div style="background:#fff;border-radius:24px;overflow:hidden;display:flex;flex-direction:column;box-shadow:0 1px 0 #e6dfd0" style-hover="box-shadow:0 18px 40px -18px #3b58a888;transform:translateY(-3px)">
+          <div style="aspect-ratio:4/3;background:#f4efe4">
+            <image-slot id="{{ it.slot }}" shape="rect" src="{{ it.photo }}" placeholder="{{ it.name }}"></image-slot>
+          </div>
+          <div style="padding:20px 22px 22px;display:flex;flex-direction:column;gap:8px;flex:1">
+            <div style="display:flex;justify-content:space-between;align-items:baseline;gap:12px">
+              <h3 style="margin:0;font-size:21px;font-weight:700;line-height:1.15;color:#16307a">{{ it.name }}</h3>
+              <span style="font-family:'JetBrains Mono',monospace;font-weight:700;font-size:15px;color:#d94a2b;white-space:nowrap">{{ it.price }}</span>
+            </div>
+            <p style="margin:0;font-size:15px;line-height:1.45;color:#3b58a8;text-wrap:pretty">{{ it.desc }}</p>
+            <sc-if value="{{ it.tag }}" hint-placeholder-val="{{ false }}">
+              <span style="margin-top:auto;padding-top:6px;align-self:flex-start;font-family:'JetBrains Mono',monospace;font-size:11px;font-weight:700;letter-spacing:.1em;text-transform:uppercase;color:#16307a"><span style="background:#ffc629;border-radius:999px;padding:4px 10px">{{ it.tag }}</span></span>
+            </sc-if>
+          </div>
+        </div>
+      </sc-for>
+    </div>
+    <p style="margin:28px 0 0;font-size:14px;color:#3b58a8">Online prices shown where available. Full menu and daily specials at the counter.</p>
+  </div>
+</section>
+
+<section id="flavors" data-screen-label="Flavors" style="background:#ffc629;color:#16307a">
+  <div style="max-width:1320px;margin:0 auto;padding:clamp(64px,8vw,120px) clamp(16px,4vw,40px);display:grid;grid-template-columns:repeat(auto-fit,minmax(min(100%,420px),1fr));gap:clamp(32px,6vw,80px);align-items:center">
+    <div style="display:flex;flex-direction:column;gap:20px">
+      <span style="font-family:'JetBrains Mono',monospace;font-size:12px;font-weight:700;letter-spacing:.16em;text-transform:uppercase;color:#16307a">Baked in-house, daily</span>
+      <h2 style="margin:0;font-family:'Bagel Fat One',cursive;font-weight:400;font-size:clamp(46px,6vw,88px);line-height:.9;color:#16307a">Pick your bagel.</h2>
+      <p style="margin:0;max-width:460px;font-size:19px;line-height:1.5;color:#16307a;text-wrap:pretty">Some folks swear by it plain and still warm. Others need the works. We don't judge. (We do judge toasting a fresh one.)</p>
+    </div>
+    <div style="display:flex;flex-wrap:wrap;gap:10px">
+      <sc-for list="{{ flavors }}" as="f" hint-placeholder-count="12">
+        <span style="font-size:clamp(18px,1.8vw,24px);font-weight:700;padding:13px 22px;border-radius:999px;background:{{ f.bg }};color:{{ f.fg }}">{{ f.name }}</span>
+      </sc-for>
+    </div>
+  </div>
+</section>
+
+<section data-screen-label="Reviews" style="max-width:1320px;margin:0 auto;padding:clamp(64px,8vw,120px) clamp(16px,4vw,40px)">
+  <div style="display:flex;justify-content:space-between;align-items:flex-end;gap:24px;flex-wrap:wrap;margin-bottom:44px">
+    <h2 style="margin:0;font-family:'Bagel Fat One',cursive;font-weight:400;font-size:clamp(40px,5vw,72px);line-height:.92;color:#ffffff">Rated "Best Bagel<br><span style="color:#ffc629">Monmouth County"</span></h2>
+    <span style="font-family:'JetBrains Mono',monospace;font-size:12px;font-weight:700;letter-spacing:.16em;text-transform:uppercase;color:#f4efe4">Word on Route 33</span>
+  </div>
+  <div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(min(100%,300px),1fr));gap:20px">
+    <figure style="margin:0;display:flex;flex-direction:column;justify-content:space-between;gap:28px;background:#ffc629;border-radius:24px;padding:30px;min-width:0">
+      <blockquote style="margin:0;font-family:'Bagel Fat One',cursive;font-size:clamp(30px,3.4vw,46px);line-height:1.04;color:#16307a">"I thought Kossar's in Manhattan had the best bialys. But no — it's Tommy's."</blockquote>
+      <figcaption style="font-family:'JetBrains Mono',monospace;font-size:12px;letter-spacing:.08em;text-transform:uppercase;color:#16307a">Yelp · echoed in 7 reviews</figcaption>
+    </figure>
+    <figure style="margin:0;display:flex;flex-direction:column;justify-content:space-between;gap:28px;background:#1f3c8f;border:1px solid #3b58a8;border-radius:24px;padding:30px">
+      <blockquote style="margin:0;font-family:'Bagel Fat One',cursive;font-size:clamp(26px,2.6vw,34px);line-height:1.08;color:#ffffff">"Best bagel in Jersey. Will argue with a wall."</blockquote>
+      <figcaption style="font-family:'JetBrains Mono',monospace;font-size:12px;letter-spacing:.08em;text-transform:uppercase;color:#ffc629">Ethan K. · Yelp</figcaption>
+    </figure>
+    <figure style="margin:0;display:flex;flex-direction:column;justify-content:space-between;gap:28px;background:#1f3c8f;border:1px solid #3b58a8;border-radius:24px;padding:30px">
+      <blockquote style="margin:0;font-family:'Bagel Fat One',cursive;font-size:clamp(26px,2.6vw,34px);line-height:1.08;color:#ffffff">"Recently transplanted New Yorker. They get it. So many don't."</blockquote>
+      <figcaption style="font-family:'JetBrains Mono',monospace;font-size:12px;letter-spacing:.08em;text-transform:uppercase;color:#ffc629">Tripadvisor</figcaption>
+    </figure>
+    <figure style="margin:0;display:flex;flex-direction:column;justify-content:space-between;gap:28px;background:#d94a2b;border-radius:24px;padding:30px">
+      <blockquote style="margin:0;font-family:'Bagel Fat One',cursive;font-size:clamp(26px,2.6vw,34px);line-height:1.08;color:#ffffff">"Chewy on the outside, light and airy on the inside."</blockquote>
+      <figcaption style="font-family:'JetBrains Mono',monospace;font-size:12px;letter-spacing:.08em;text-transform:uppercase;color:#ffffff">Yelp · in 3 reviews</figcaption>
+    </figure>
+    <figure style="margin:0;display:flex;flex-direction:column;justify-content:space-between;gap:28px;background:#1f3c8f;border:1px solid #3b58a8;border-radius:24px;padding:30px">
+      <blockquote style="margin:0;font-family:'Bagel Fat One',cursive;font-size:clamp(26px,2.6vw,34px);line-height:1.08;color:#ffffff">"The real deal. And I'm from Hoboken — I know real bagels."</blockquote>
+      <figcaption style="font-family:'JetBrains Mono',monospace;font-size:12px;letter-spacing:.08em;text-transform:uppercase;color:#ffc629">Facebook</figcaption>
+    </figure>
+    <figure style="margin:0;display:flex;flex-direction:column;justify-content:space-between;gap:28px;background:#1f3c8f;border:1px solid #3b58a8;border-radius:24px;padding:30px">
+      <blockquote style="margin:0;font-family:'Bagel Fat One',cursive;font-size:clamp(26px,2.6vw,34px);line-height:1.08;color:#ffffff">"Best tuna salad anywhere!"</blockquote>
+      <figcaption style="font-family:'JetBrains Mono',monospace;font-size:12px;letter-spacing:.08em;text-transform:uppercase;color:#ffc629">Facebook</figcaption>
+    </figure>
+  </div>
+  <div style="display:flex;gap:clamp(24px,5vw,64px);flex-wrap:wrap;margin-top:36px;padding-top:28px;border-top:1px solid #3b58a8">
+    <div style="display:flex;flex-direction:column;gap:4px"><span style="font-family:'Bagel Fat One',cursive;font-size:40px;line-height:1;color:#ffc629">4.6<span style="font-size:22px">/5</span></span><span style="font-size:14px;color:#f4efe4">Tripadvisor · #1 in Englishtown</span></div>
+    <div style="display:flex;flex-direction:column;gap:4px"><span style="font-family:'Bagel Fat One',cursive;font-size:40px;line-height:1;color:#ffc629">4.6<span style="font-size:22px">/5</span></span><span style="font-size:14px;color:#f4efe4">Facebook</span></div>
+    <div style="display:flex;flex-direction:column;gap:4px"><span style="font-family:'Bagel Fat One',cursive;font-size:40px;line-height:1;color:#ffc629">Since 2005+</span><span style="font-size:14px;color:#f4efe4">Regulars who won't go anywhere else</span></div>
+  </div>
+</section>
+
+<section id="instagram" data-screen-label="Instagram" style="background:#ffffff;color:#16307a">
+  <div style="max-width:1320px;margin:0 auto;padding:clamp(64px,8vw,120px) clamp(16px,4vw,40px);display:flex;flex-direction:column;gap:40px">
+    <div style="display:flex;justify-content:space-between;align-items:flex-end;gap:24px;flex-wrap:wrap">
+      <div style="display:flex;flex-direction:column;gap:12px">
+        <span style="font-family:'JetBrains Mono',monospace;font-size:12px;font-weight:700;letter-spacing:.16em;text-transform:uppercase;color:#d94a2b">Fresh off the feed</span>
+        <h2 style="margin:0;font-family:'Bagel Fat One',cursive;font-weight:400;font-size:clamp(46px,6vw,84px);line-height:.92;color:#16307a">@tommys.bagels</h2>
+      </div>
+      <div style="display:flex;gap:10px;flex-wrap:wrap">
+        <a href="https://www.instagram.com/tommys.bagels/" target="_blank" style="display:flex;align-items:center;gap:10px;background:#16307a;color:#ffffff;padding:14px 22px;border-radius:999px;font-weight:700;font-size:16px" style-hover="background:#ffc629;color:#16307a"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="3" y="3" width="18" height="18" rx="5"></rect><circle cx="12" cy="12" r="4"></circle><circle cx="17.5" cy="6.5" r="1.2" fill="currentColor" stroke="none"></circle></svg>Follow on Instagram</a>
+        <a href="https://www.tiktok.com/@tommysbagels" target="_blank" style="display:flex;align-items:center;gap:10px;background:transparent;color:#16307a;padding:14px 22px;border-radius:999px;font-weight:700;font-size:16px;border:2px solid #16307a" style-hover="background:#f4efe4;color:#16307a"><svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor"><path d="M12.53.02C13.84 0 15.14.01 16.44 0c.08 1.53.63 3.09 1.75 4.17 1.12 1.11 2.7 1.62 4.24 1.79v4.030c-1.44-.05-2.89-.35-4.2-.97-.57-.26-1.1-.59-1.62-.93-.01 2.92.01 5.84-.02 8.75-.08 1.4-.54 2.79-1.35 3.94-1.31 1.92-3.58 3.17-5.91 3.21-1.43.08-2.86-.31-4.08-1.03-2.02-1.19-3.44-3.37-3.65-5.71-.02-.5-.03-1-.01-1.49.18-1.9 1.12-3.72 2.58-4.96 1.66-1.44 3.98-2.13 6.15-1.72.02 1.48-.04 2.96-.04 4.44-.99-.32-2.15-.23-3.02.37-.63.41-1.11 1.04-1.36 1.75-.21.51-.15 1.07-.14 1.61.24 1.64 1.82 3.02 3.5 2.87 1.12-.01 2.19-.66 2.77-1.61.19-.33.4-.67.41-1.06.1-1.79.06-3.57.07-5.36.01-4.03-.01-8.05.02-12.07z"></path></svg>TikTok</a>
+      </div>
+    </div>
+    <div style="display:grid;grid-template-columns:repeat(auto-fill,minmax(min(100%,max(140px,calc((100% - 48px) / 4))),1fr));gap:16px">
+      <figure style="margin:0;display:flex;flex-direction:column;gap:12px;min-width:0">
+      <div style="position:relative;aspect-ratio:9/16;border-radius:22px;overflow:hidden;background:#f4efe4">
+        <sc-if value="{{ reel1.has }}" hint-placeholder-val="{{ false }}">
+          <iframe src="{{ reel1.embed }}" title="Tommy's Bagels Instagram reel 1" style="position:absolute;inset:0;width:100%;height:100%;border:0;background:#ffffff" allowfullscreen="true" scrolling="no" loading="lazy"></iframe>
+        </sc-if>
+        <sc-if value="{{ reel1.empty }}" hint-placeholder-val="{{ true }}">
+          <image-slot id="ig-reel-1" shape="rect" placeholder="Reel 1 — paste its link in Tweaks to play here" src="images/staff-baking.jpg"></image-slot>
+          <a href="https://www.instagram.com/tommys.bagels/" target="_blank" aria-label="Watch on Instagram" style="position:absolute;top:12px;right:12px;width:34px;height:34px;border-radius:50%;background:#16307acc;display:grid;place-items:center"><svg width="12" height="12" viewBox="0 0 24 24" fill="#ffffff"><path d="M6 3l15 9-15 9z"></path></svg></a>
+        </sc-if>
+      </div>
+      <figcaption style="display:flex;flex-direction:column;gap:4px"><span style="font-size:16px;font-weight:600;line-height:1.35;color:#16307a;text-wrap:pretty">Morning bake, straight off the boards</span><a href="https://www.instagram.com/tommys.bagels/" target="_blank" style="font-size:13px;color:#3b58a8;display:inline-flex;align-items:center;gap:6px" style-hover="color:#d94a2b"><svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2"><rect x="3" y="3" width="18" height="18" rx="5"></rect><circle cx="12" cy="12" r="4"></circle></svg>tommys.bagels/Instagram</a></figcaption>
+      </figure>
+      <figure style="margin:0;display:flex;flex-direction:column;gap:12px;min-width:0">
+      <div style="position:relative;aspect-ratio:9/16;border-radius:22px;overflow:hidden;background:#f4efe4">
+        <sc-if value="{{ reel2.has }}" hint-placeholder-val="{{ false }}">
+          <iframe src="{{ reel2.embed }}" title="Tommy's Bagels Instagram reel 2" style="position:absolute;inset:0;width:100%;height:100%;border:0;background:#ffffff" allowfullscreen="true" scrolling="no" loading="lazy"></iframe>
+        </sc-if>
+        <sc-if value="{{ reel2.empty }}" hint-placeholder-val="{{ true }}">
+          <image-slot id="ig-reel-2" shape="rect" placeholder="Reel 2 — paste its link in Tweaks to play here" src="images/bagel-ugc-1.jpg"></image-slot>
+          <a href="https://www.instagram.com/tommys.bagels/" target="_blank" aria-label="Watch on Instagram" style="position:absolute;top:12px;right:12px;width:34px;height:34px;border-radius:50%;background:#16307acc;display:grid;place-items:center"><svg width="12" height="12" viewBox="0 0 24 24" fill="#ffffff"><path d="M6 3l15 9-15 9z"></path></svg></a>
+        </sc-if>
+      </div>
+      <figcaption style="display:flex;flex-direction:column;gap:4px"><span style="font-size:16px;font-weight:600;line-height:1.35;color:#16307a;text-wrap:pretty">Building a pork roll, egg &amp; cheese</span><a href="https://www.instagram.com/tommys.bagels/" target="_blank" style="font-size:13px;color:#3b58a8;display:inline-flex;align-items:center;gap:6px" style-hover="color:#d94a2b"><svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2"><rect x="3" y="3" width="18" height="18" rx="5"></rect><circle cx="12" cy="12" r="4"></circle></svg>tommys.bagels/Instagram</a></figcaption>
+      </figure>
+      <figure style="margin:0;display:flex;flex-direction:column;gap:12px;min-width:0">
+      <div style="position:relative;aspect-ratio:9/16;border-radius:22px;overflow:hidden;background:#f4efe4">
+        <sc-if value="{{ reel3.has }}" hint-placeholder-val="{{ false }}">
+          <iframe src="{{ reel3.embed }}" title="Tommy's Bagels Instagram reel 3" style="position:absolute;inset:0;width:100%;height:100%;border:0;background:#ffffff" allowfullscreen="true" scrolling="no" loading="lazy"></iframe>
+        </sc-if>
+        <sc-if value="{{ reel3.empty }}" hint-placeholder-val="{{ true }}">
+          <image-slot id="ig-reel-3" shape="rect" placeholder="Reel 3 — paste its link in Tweaks to play here" src="images/bagel-rack.jpg"></image-slot>
+          <a href="https://www.instagram.com/tommys.bagels/" target="_blank" aria-label="Watch on Instagram" style="position:absolute;top:12px;right:12px;width:34px;height:34px;border-radius:50%;background:#16307acc;display:grid;place-items:center"><svg width="12" height="12" viewBox="0 0 24 24" fill="#ffffff"><path d="M6 3l15 9-15 9z"></path></svg></a>
+        </sc-if>
+      </div>
+      <figcaption style="display:flex;flex-direction:column;gap:4px"><span style="font-size:16px;font-weight:600;line-height:1.35;color:#16307a;text-wrap:pretty">Bialys fresh from the oven</span><a href="https://www.instagram.com/tommys.bagels/" target="_blank" style="font-size:13px;color:#3b58a8;display:inline-flex;align-items:center;gap:6px" style-hover="color:#d94a2b"><svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2"><rect x="3" y="3" width="18" height="18" rx="5"></rect><circle cx="12" cy="12" r="4"></circle></svg>tommys.bagels/Instagram</a></figcaption>
+      </figure>
+      <figure style="margin:0;display:flex;flex-direction:column;gap:12px;min-width:0">
+      <div style="position:relative;aspect-ratio:9/16;border-radius:22px;overflow:hidden;background:#f4efe4">
+        <sc-if value="{{ reel4.has }}" hint-placeholder-val="{{ false }}">
+          <iframe src="{{ reel4.embed }}" title="Tommy's Bagels Instagram reel 4" style="position:absolute;inset:0;width:100%;height:100%;border:0;background:#ffffff" allowfullscreen="true" scrolling="no" loading="lazy"></iframe>
+        </sc-if>
+        <sc-if value="{{ reel4.empty }}" hint-placeholder-val="{{ true }}">
+          <image-slot id="ig-reel-4" shape="rect" placeholder="Reel 4 — paste its link in Tweaks to play here" src="images/interior-yelp.jpg"></image-slot>
+          <a href="https://www.instagram.com/tommys.bagels/" target="_blank" aria-label="Watch on Instagram" style="position:absolute;top:12px;right:12px;width:34px;height:34px;border-radius:50%;background:#16307acc;display:grid;place-items:center"><svg width="12" height="12" viewBox="0 0 24 24" fill="#ffffff"><path d="M6 3l15 9-15 9z"></path></svg></a>
+        </sc-if>
+      </div>
+      <figcaption style="display:flex;flex-direction:column;gap:4px"><span style="font-size:16px;font-weight:600;line-height:1.35;color:#16307a;text-wrap:pretty">Behind the counter at Andee Plaza</span><a href="https://www.instagram.com/tommys.bagels/" target="_blank" style="font-size:13px;color:#3b58a8;display:inline-flex;align-items:center;gap:6px" style-hover="color:#d94a2b"><svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2"><rect x="3" y="3" width="18" height="18" rx="5"></rect><circle cx="12" cy="12" r="4"></circle></svg>tommys.bagels/Instagram</a></figcaption>
+      </figure>
+    </div>
+    <div style="display:grid;grid-template-columns:repeat(auto-fill,minmax(min(100%,max(240px,calc((100% - 48px) / 3))),1fr));gap:36px 24px">
+      <figure style="margin:0;display:flex;flex-direction:column;gap:12px;min-width:0"><div style="aspect-ratio:4/5;border-radius:20px;overflow:hidden;background:#f4efe4"><image-slot id="ig-post-1" shape="rect" placeholder="Drop post photo" src="images/porkroll-1.jpg"></image-slot></div><figcaption style="display:flex;flex-direction:column;gap:4px"><span style="font-size:16px;font-weight:600;line-height:1.35;color:#16307a;text-wrap:pretty">Pork roll, egg &amp; cheese</span><a href="https://www.instagram.com/tommys.bagels/" target="_blank" style="font-size:13px;color:#3b58a8;display:inline-flex;align-items:center;gap:6px" style-hover="color:#d94a2b"><svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2"><rect x="3" y="3" width="18" height="18" rx="5"></rect><circle cx="12" cy="12" r="4"></circle></svg>tommys.bagels/Instagram</a></figcaption></figure>
+      <figure style="margin:0;display:flex;flex-direction:column;gap:12px;min-width:0"><div style="aspect-ratio:4/5;border-radius:20px;overflow:hidden;background:#f4efe4"><image-slot id="ig-post-2" shape="rect" placeholder="Drop post photo" src="images/everything-cc.jpg"></image-slot></div><figcaption style="display:flex;flex-direction:column;gap:4px"><span style="font-size:16px;font-weight:600;line-height:1.35;color:#16307a;text-wrap:pretty">Everything with scallion schmear</span><a href="https://www.instagram.com/tommys.bagels/" target="_blank" style="font-size:13px;color:#3b58a8;display:inline-flex;align-items:center;gap:6px" style-hover="color:#d94a2b"><svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2"><rect x="3" y="3" width="18" height="18" rx="5"></rect><circle cx="12" cy="12" r="4"></circle></svg>tommys.bagels/Instagram</a></figcaption></figure>
+      <figure style="margin:0;display:flex;flex-direction:column;gap:12px;min-width:0"><div style="aspect-ratio:4/5;border-radius:20px;overflow:hidden;background:#f4efe4"><image-slot id="ig-post-3" shape="rect" placeholder="Drop post photo" src="images/lox-2.jpg"></image-slot></div><figcaption style="display:flex;flex-direction:column;gap:4px"><span style="font-size:16px;font-weight:600;line-height:1.35;color:#16307a;text-wrap:pretty">Onion bagel, lox &amp; capers</span><a href="https://www.instagram.com/tommys.bagels/" target="_blank" style="font-size:13px;color:#3b58a8;display:inline-flex;align-items:center;gap:6px" style-hover="color:#d94a2b"><svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2"><rect x="3" y="3" width="18" height="18" rx="5"></rect><circle cx="12" cy="12" r="4"></circle></svg>tommys.bagels/Instagram</a></figcaption></figure>
+      <figure style="margin:0;display:flex;flex-direction:column;gap:12px;min-width:0"><div style="aspect-ratio:4/5;border-radius:20px;overflow:hidden;background:#f4efe4"><image-slot id="ig-post-4" shape="rect" placeholder="Drop post photo" src="images/bagelshop-1.jpg"></image-slot></div><figcaption style="display:flex;flex-direction:column;gap:4px"><span style="font-size:16px;font-weight:600;line-height:1.35;color:#16307a;text-wrap:pretty">A dozen, still warm</span><a href="https://www.instagram.com/tommys.bagels/" target="_blank" style="font-size:13px;color:#3b58a8;display:inline-flex;align-items:center;gap:6px" style-hover="color:#d94a2b"><svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2"><rect x="3" y="3" width="18" height="18" rx="5"></rect><circle cx="12" cy="12" r="4"></circle></svg>tommys.bagels/Instagram</a></figcaption></figure>
+      <figure style="margin:0;display:flex;flex-direction:column;gap:12px;min-width:0"><div style="aspect-ratio:4/5;border-radius:20px;overflow:hidden;background:#f4efe4"><image-slot id="ig-post-5" shape="rect" placeholder="Drop post photo" src="images/platter-1.jpg"></image-slot></div><figcaption style="display:flex;flex-direction:column;gap:4px"><span style="font-size:16px;font-weight:600;line-height:1.35;color:#16307a;text-wrap:pretty">Catering platter for the office</span><a href="https://www.instagram.com/tommys.bagels/" target="_blank" style="font-size:13px;color:#3b58a8;display:inline-flex;align-items:center;gap:6px" style-hover="color:#d94a2b"><svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2"><rect x="3" y="3" width="18" height="18" rx="5"></rect><circle cx="12" cy="12" r="4"></circle></svg>tommys.bagels/Instagram</a></figcaption></figure>
+      <figure style="margin:0;display:flex;flex-direction:column;gap:12px;min-width:0"><div style="aspect-ratio:4/5;border-radius:20px;overflow:hidden;background:#f4efe4"><image-slot id="ig-post-6" shape="rect" placeholder="Drop post photo" src="images/chicken-salad.jpg"></image-slot></div><figcaption style="display:flex;flex-direction:column;gap:4px"><span style="font-size:16px;font-weight:600;line-height:1.35;color:#16307a;text-wrap:pretty">Chicken salad on sesame</span><a href="https://www.instagram.com/tommys.bagels/" target="_blank" style="font-size:13px;color:#3b58a8;display:inline-flex;align-items:center;gap:6px" style-hover="color:#d94a2b"><svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2"><rect x="3" y="3" width="18" height="18" rx="5"></rect><circle cx="12" cy="12" r="4"></circle></svg>tommys.bagels/Instagram</a></figcaption></figure>
+    </div>
+  </div>
+</section>
+
+<section id="catering" data-screen-label="Catering" style="background:#3b58a8;color:#ffffff">
+  <div style="max-width:1320px;margin:0 auto;padding:clamp(64px,8vw,120px) clamp(16px,4vw,40px);display:grid;grid-template-columns:repeat(auto-fit,minmax(min(100%,440px),1fr));gap:clamp(36px,5vw,72px);align-items:center">
+    <div style="position:relative;aspect-ratio:5/4;border-radius:32px;overflow:hidden;background:#2a4796">
+      <image-slot id="v2-catering" shape="rect" placeholder="Drop a photo: a full bagel platter" src="images/platter-1.jpg"></image-slot>
+    </div>
+    <div style="display:flex;flex-direction:column;gap:26px">
+      <span style="font-family:'JetBrains Mono',monospace;font-size:12px;font-weight:700;letter-spacing:.16em;text-transform:uppercase;color:#ffc629">Catering &amp; platters</span>
+      <h2 style="margin:0;font-family:'Bagel Fat One',cursive;font-weight:400;font-size:clamp(46px,6vw,84px);line-height:.9;color:#ffffff">Feed the<br>whole crew.</h2>
+      <p style="margin:0;max-width:500px;font-size:19px;line-height:1.5;color:#f4efe4;text-wrap:pretty">Office mornings, brunches, game days, shiva and sympathy trays. Tell us the headcount and we'll build the platter — bagels, schmears, fish, deli and sweets.</p>
+      <div style="display:flex;flex-direction:column;border-top:1px solid #4d69b5">
+        <div style="display:flex;justify-content:space-between;align-items:baseline;gap:16px;padding:16px 0;border-bottom:1px solid #4d69b5"><span style="font-size:20px;font-weight:700">Bagel &amp; Schmear Platter</span><span style="font-size:15px;color:#f4efe4;text-align:right">Mixed dozens + cream cheeses</span></div>
+        <div style="display:flex;justify-content:space-between;align-items:baseline;gap:16px;padding:16px 0;border-bottom:1px solid #4d69b5"><span style="font-size:20px;font-weight:700">Smoked Fish Platter</span><span style="font-size:15px;color:#f4efe4;text-align:right">Lox, whitefish, capers, onion, tomato</span></div>
+        <div style="display:flex;justify-content:space-between;align-items:baseline;gap:16px;padding:16px 0;border-bottom:1px solid #4d69b5"><span style="font-size:20px;font-weight:700">Deli Sandwich Platter</span><span style="font-size:15px;color:#f4efe4;text-align:right">Boar's Head, tuna &amp; chicken salad</span></div>
+        <div style="display:flex;justify-content:space-between;align-items:baseline;gap:16px;padding:16px 0;border-bottom:1px solid #4d69b5"><span style="font-size:20px;font-weight:700">Sweets &amp; Muffins</span><span style="font-size:15px;color:#f4efe4;text-align:right">Add to any order</span></div>
+      </div>
+      <div style="display:flex;gap:12px;flex-wrap:wrap;align-items:center">
+        <a href="tel:+17324314490" class="scp2" style="background: rgb(255, 198, 41); color: rgb(22, 48, 122); padding: 17px 28px; border-radius: 999px; font-weight: 700; font-size: 17px;">Call to order · (732) 431-4490</a>
+      </div>
+      <span style="font-size:14px;color:#f4efe4">Please give us 24 hours' notice for large orders.</span>
+    </div>
+  </div>
+</section>
+
+<section id="locations" data-screen-label="Locations" style="background:#ffffff;color:#16307a">
+  <div style="max-width:1320px;margin:0 auto;padding:clamp(64px,8vw,120px) clamp(16px,4vw,40px);display:flex;flex-direction:column;gap:44px">
+    <div style="display:flex;flex-direction:column;gap:12px">
+      <span style="font-family:'JetBrains Mono',monospace;font-size:12px;font-weight:700;letter-spacing:.16em;text-transform:uppercase;color:#d94a2b">Two ovens, one Manalapan</span>
+      <h2 style="margin:0;font-family:'Bagel Fat One',cursive;font-weight:400;font-size:clamp(46px,6vw,84px);line-height:.92;color:#16307a">Come hungry.</h2>
+    </div>
+    <div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(min(100%,420px),1fr));gap:24px">
+      <sc-for list="{{ locations }}" as="l" hint-placeholder-count="2">
+        <div style="background:#fff;border-radius:28px;overflow:hidden;display:flex;flex-direction:column;box-shadow:0 1px 0 #e6dfd0">
+          <div style="aspect-ratio:16/9;background:#f4efe4;position:relative">
+            <image-slot id="{{ l.slot }}" shape="rect" src="{{ l.photo }}" placeholder="{{ l.slotLabel }}"></image-slot>
+          </div>
+          <div style="padding:28px;display:flex;flex-direction:column;gap:18px">
+            <div style="display:flex;justify-content:space-between;align-items:center;gap:12px;flex-wrap:wrap">
+              <h3 style="margin:0;font-family:'Bagel Fat One',cursive;font-weight:400;font-size:34px;line-height:1;color:#16307a">{{ l.name }}</h3>
+              <span style="display:inline-flex;align-items:center;gap:8px;font-family:'JetBrains Mono',monospace;font-size:11px;font-weight:700;letter-spacing:.08em;text-transform:uppercase;padding:6px 12px;border-radius:999px;background:{{ l.pillBg }};color:{{ l.pillFg }}">{{ l.status }}</span>
+            </div>
+            <sc-if value="{{ l.kosher }}" hint-placeholder-val="{{ false }}">
+              <span style="align-self:flex-start;font-family:'JetBrains Mono',monospace;font-size:11px;font-weight:700;letter-spacing:.1em;text-transform:uppercase;background:#16307a;color:#ffc629;border-radius:999px;padding:5px 12px">Kosher</span>
+            </sc-if>
+            <div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(160px,1fr));gap:16px">
+              <div style="display:flex;flex-direction:column;gap:4px"><span style="font-family:'JetBrains Mono',monospace;font-size:11px;font-weight:700;letter-spacing:.14em;text-transform:uppercase;color:#d94a2b">Address</span><span style="font-size:17px;font-weight:600;line-height:1.35">{{ l.addr1 }}<br>{{ l.addr2 }}</span></div>
+              <div style="display:flex;flex-direction:column;gap:4px"><span style="font-family:'JetBrains Mono',monospace;font-size:11px;font-weight:700;letter-spacing:.14em;text-transform:uppercase;color:#d94a2b">Hours</span><span style="font-size:17px;font-weight:600;line-height:1.35">Open daily<br>{{ l.hours }}</span></div>
+            </div>
+            <div style="display:flex;gap:10px;flex-wrap:wrap;padding-top:4px">
+              <a href="{{ l.map }}" target="_blank" style="flex:1;min-width:150px;text-align:center;background:#16307a;color:#ffffff;padding:14px 20px;border-radius:999px;font-weight:700;font-size:16px" style-hover="background:#d94a2b;color:#ffffff">Directions</a>
+              <a href="tel:+17324314490" style="flex:1;min-width:150px;text-align:center;background:transparent;color:#16307a;padding:14px 20px;border-radius:999px;font-weight:700;font-size:16px;border:2px solid #16307a" style-hover="background:#ffc629;color:#16307a">Call (732) 431-4490</a>
+            </div>
+          </div>
+        </div>
+      </sc-for>
+    </div>
+  </div>
+</section>
+
+<footer style="background:#16307a">
+  <div style="max-width:1320px;margin:0 auto;padding:clamp(48px,6vw,80px) clamp(16px,4vw,40px) 28px;display:flex;flex-direction:column;gap:28px">
+    <div style="display:flex;justify-content:space-between;align-items:flex-end;gap:24px;flex-wrap:wrap">
+      <div style="font-family:'Bagel Fat One',cursive;font-size:clamp(80px,17vw,240px);line-height:.8;letter-spacing:-0.03em;color:#ffc629">Tommy's<span style="color:#d94a2b">.</span></div>
+      <div style="display:flex;gap:12px;align-items:center">
+        <a href="https://www.instagram.com/tommys.bagels/" target="_blank" aria-label="Instagram @tommys.bagels" style="width:52px;height:52px;border-radius:50%;background:#1f3c8f;border:1px solid #3b58a8;display:grid;place-items:center;color:#ffffff" style-hover="background:#ffc629;color:#16307a"><svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="3" y="3" width="18" height="18" rx="5"></rect><circle cx="12" cy="12" r="4"></circle><circle cx="17.5" cy="6.5" r="1.2" fill="currentColor" stroke="none"></circle></svg></a>
+        <a href="https://www.tiktok.com/@tommysbagels" target="_blank" aria-label="TikTok @tommysbagels" style="width:52px;height:52px;border-radius:50%;background:#1f3c8f;border:1px solid #3b58a8;display:grid;place-items:center;color:#ffffff" style-hover="background:#ffc629;color:#16307a"><svg width="21" height="21" viewBox="0 0 24 24" fill="currentColor"><path d="M12.53.02C13.84 0 15.14.01 16.44 0c.08 1.53.63 3.09 1.75 4.17 1.12 1.11 2.7 1.62 4.24 1.79v4.03c-1.44-.05-2.89-.35-4.2-.97-.57-.26-1.1-.59-1.62-.93-.01 2.92.01 5.84-.02 8.75-.08 1.4-.54 2.79-1.35 3.94-1.31 1.92-3.58 3.17-5.91 3.21-1.43.08-2.86-.31-4.08-1.03-2.02-1.19-3.44-3.37-3.65-5.71-.02-.5-.03-1-.01-1.49.18-1.9 1.12-3.72 2.58-4.96 1.66-1.44 3.98-2.13 6.15-1.72.02 1.48-.04 2.96-.04 4.44-.99-.32-2.15-.23-3.02.37-.63.41-1.11 1.04-1.36 1.75-.21.51-.15 1.07-.14 1.61.24 1.64 1.82 3.02 3.5 2.87 1.12-.01 2.19-.66 2.77-1.61.19-.33.4-.67.41-1.06.1-1.79.06-3.57.07-5.36.01-4.03-.01-8.05.02-12.07z"></path></svg></a>
+        <a href="mailto:hello@tommysbagelsnj.com" style="color:#ffffff;font-weight:600;font-size:16px;padding-left:8px" style-hover="color:#ffc629">hello@tommysbagelsnj.com</a>
+      </div>
+    </div>
+    <div style="display:flex;justify-content:space-between;gap:16px;flex-wrap:wrap;padding-top:20px;border-top:1px solid #3b58a8;font-family:'JetBrains Mono',monospace;font-size:12px;letter-spacing:.06em;text-transform:uppercase;color:#f4efe4">
+      <span>Original Brooklyn bagels · Bialys · Boar's Head deli</span>
+      <span>© 2026 Tommy's Bagels, Manalapan NJ</span>
+    </div>
+  </div>
+</footer>
+
+</div>
+</x-dc>
+<script type="text/x-dc" data-dc-script data-props="{&quot;accent&quot;:{&quot;editor&quot;:&quot;color&quot;,&quot;default&quot;:&quot;#d94a2b&quot;,&quot;options&quot;:[&quot;#d94a2b&quot;,&quot;#d7321f&quot;,&quot;#ffc629&quot;],&quot;tsType&quot;:&quot;string&quot;,&quot;section&quot;:&quot;Accents&quot;},&quot;reel1&quot;:{&quot;editor&quot;:&quot;text&quot;,&quot;default&quot;:&quot;&quot;,&quot;tsType&quot;:&quot;string&quot;,&quot;section&quot;:&quot;Instagram reels (paste links)&quot;},&quot;reel2&quot;:{&quot;editor&quot;:&quot;text&quot;,&quot;default&quot;:&quot;&quot;,&quot;tsType&quot;:&quot;string&quot;,&quot;section&quot;:&quot;Instagram reels (paste links)&quot;},&quot;reel3&quot;:{&quot;editor&quot;:&quot;text&quot;,&quot;default&quot;:&quot;&quot;,&quot;tsType&quot;:&quot;string&quot;,&quot;section&quot;:&quot;Instagram reels (paste links)&quot;},&quot;reel4&quot;:{&quot;editor&quot;:&quot;text&quot;,&quot;default&quot;:&quot;&quot;,&quot;tsType&quot;:&quot;string&quot;,&quot;section&quot;:&quot;Instagram reels (paste links)&quot;}}">
+class Component extends DCLogic {
+  state = { tab: 'breakfast', now: new Date() };
+  componentDidMount() { this.t = setInterval(() => this.setState({ now: new Date() }), 60000); }
+  componentWillUnmount() { clearInterval(this.t); }
+  menu = {
+    breakfast: [
+      { slot: 'm-porkroll', photo: 'images/bagel-ugc-1.jpg', name: 'Pork Roll, Egg & Cheese', price: '', desc: 'The Jersey classic on a plain bagel — or any bagel you want.', tag: 'Jersey essential' },
+      { slot: 'm-eggcheese', photo: 'images/eggcheese-1.jpg', name: 'Egg & Cheese', price: '$6.50', desc: 'Fluffy eggs and melted American on a bagel still warm from the oven.' },
+      { slot: 'm-mexican', photo: 'images/mexican-1.jpg', name: 'Mexican Grande', price: '$8.00', desc: 'A big, bold breakfast sandwich with a kick. Bring napkins.', tag: 'Fan favorite' },
+      { slot: 'm-bec', photo: 'images/bec-1.jpg', name: 'Bacon, Egg & Cheese', price: '', desc: 'Crispy bacon, eggs and cheese. The reason you set an alarm.' },
+    ],
+    spreads: [
+      { slot: 'm-cc', photo: 'images/everything-cc.jpg', name: 'Bagel & Cream Cheese', price: '$4.00', desc: 'Thick, chewy, crackly outside. Plain or a flavored schmear.' },
+      { slot: 'm-cox', photo: 'images/spread-1.jpg', name: 'Bagel & Cox Spread', price: '$6.00', desc: 'The house spread regulars order by name.' },
+      { slot: 'm-lox', photo: 'images/lox-1.jpg', name: 'Onion Bagel, Lox & Capers', price: '', desc: 'Silky lox, cream cheese and capers on a fresh onion bagel.', tag: 'Customer pick' },
+      { slot: 'm-whitefish', photo: 'images/whitefish-platter.jpg', name: 'Bialy & Whitefish', price: '', desc: 'Whitefish salad and tomato on a fresh-baked bialy.' },
+    ],
+    lunch: [
+      { slot: 'm-tuna', photo: 'images/tuna-1.jpg', name: 'Tuna Salad', price: '$7.00', desc: 'Classic deli tuna, lettuce and tomato on your bagel.' },
+      { slot: 'm-chicken', photo: 'images/chicken-salad.jpg', name: 'Chicken Salad', price: '$7.00', desc: 'House chicken salad, piled high. Regulars swear by it.', tag: 'House made' },
+      { slot: 'm-boars', photo: 'images/deli-boars.jpg', name: "Boar's Head Deli", price: '', desc: "Premium Boar's Head cold cuts, sliced to order on your pick of bagel." },
+      { slot: 'm-turkey', photo: 'images/turkey-avocado.jpg', name: 'Turkey & Avocado', price: '', desc: 'Sliced turkey and fresh avocado on a toasted everything.' },
+    ],
+  };
+  renderVals() {
+    const accent = this.props.accent ?? '#d94a2b';
+    const now = this.state.now, m = now.getHours() * 60 + now.getMinutes();
+    const isOpen = (o) => m >= o && m < 15 * 60;
+    const fmt = (o) => o === 330 ? '5:30 AM' : '6 AM';
+    const statusOf = (o) => isOpen(o) ? 'Open · until 3 PM' : (m < o ? `Opens ${fmt(o)}` : `Closed · opens ${fmt(o)}`);
+    const anyOpen = isOpen(330) || isOpen(360);
+    const statusText = anyOpen ? 'Ovens on · open until 3 PM' : (m < 330 ? 'First batch at 5:30 AM' : 'Closed · back at 5:30 AM');
+    const statusDot = React.createElement('span', { style: { width: 10, height: 10, borderRadius: '50%', background: anyOpen ? '#7bc96f' : accent, animation: anyOpen ? 'tb-pulse 1.6s ease-in-out infinite' : 'none' } });
+
+    const words = ['Everything', 'Sesame', 'Blueberry', 'Pork Roll', 'Bialys', 'Cinnamon Raisin', 'Onion', "Boar's Head", 'Poppy', 'Chicken Salad'];
+    const run = words.flatMap((w, i) => [
+      React.createElement('span', { key: 'w' + i, style: { fontFamily: "'Bagel Fat One',cursive", fontSize: 'clamp(28px,3.4vw,44px)', lineHeight: 1, whiteSpace: 'nowrap' } }, w),
+      React.createElement('span', { key: 'd' + i, style: { width: 18, height: 18, borderRadius: '50%', border: '5px solid ' + accent, flex: 'none' } }),
+    ]);
+    const marquee = React.createElement('div', { style: { display: 'flex', width: 'max-content', animation: 'tb-marquee 40s linear infinite' } },
+      [0, 1].map(k => React.createElement('div', { key: k, style: { display: 'flex', alignItems: 'center', gap: 32, paddingRight: 32 } }, run)));
+
+    const ringText = 'BEST BAGEL · MONMOUTH COUNTY · BEST BAGEL · MONMOUTH COUNTY · ';
+    const badge = React.createElement('div', { style: { width: '100%', height: '100%', borderRadius: '50%', background: '#ffc629', position: 'relative', boxShadow: '0 12px 30px -8px #000a' } },
+      React.createElement('svg', { viewBox: '0 0 100 100', style: { position: 'absolute', inset: 0, width: '100%', height: '100%', animation: 'tb-spin 24s linear infinite' } },
+        React.createElement('defs', null, React.createElement('path', { id: 'tbring2', d: 'M50,50 m-38,0 a38,38 0 1,1 76,0 a38,38 0 1,1 -76,0' })),
+        React.createElement('text', { style: { fontFamily: "'JetBrains Mono',monospace", fontSize: 7.6, fontWeight: 700, letterSpacing: 1, fill: '#16307a' } },
+          React.createElement('textPath', { href: '#tbring2' }, ringText))),
+      React.createElement('div', { style: { position: 'absolute', inset: 0, display: 'grid', placeItems: 'center', fontFamily: "'Bagel Fat One',cursive", fontSize: 'clamp(30px,3.4vw,40px)', color: accent } }, '#1'));
+
+    const tabDefs = [['breakfast', 'Breakfast'], ['spreads', 'Bagels & Spreads'], ['lunch', 'Deli & Lunch']];
+    const tabs = tabDefs.map(([id, label]) => ({ label, bg: this.state.tab === id ? '#16307a' : 'transparent', fg: this.state.tab === id ? '#ffffff' : '#16307a', onClick: () => this.setState({ tab: id }) }));
+
+    const fl = ['Plain', 'Everything', 'Sesame', 'Poppy', 'Onion', 'Garlic', 'Salt', 'Pumpernickel', 'Whole Wheat', 'Cinnamon Raisin', 'Blueberry', 'Bialy'];
+    const flavors = fl.map((name, i) => ({ name, bg: i % 4 === 1 ? '#16307a' : '#ffffff', fg: i % 4 === 1 ? '#ffc629' : '#16307a' }));
+
+    const loc = (o) => isOpen(o) ? { pillBg: '#e3f3dc', pillFg: '#1f5a24' } : { pillBg: '#f4efe4', pillFg: '#3b58a8' };
+    const locations = [
+      { slot: 'loc-andee', photo: 'images/storefront-andee.jpg', slotLabel: 'Andee Plaza storefront', name: 'Andee Plaza', addr1: '130 Route 33 West, Unit 6', addr2: 'Manalapan, NJ 07726', hours: '6:00 AM – 3:00 PM', status: statusOf(360), kosher: false, map: 'https://maps.apple.com/?q=130+NJ-33+Unit+6+Manalapan+NJ+07726', ...loc(360) },
+      { slot: 'loc-yorktowne', photo: 'images/yorktowne-plaza.jpg', slotLabel: 'Yorktowne Plaza storefront', name: 'Yorktowne Plaza', addr1: "300 Gordons Corner Rd", addr2: 'Manalapan, NJ 07726', hours: '5:30 AM – 3:00 PM', status: statusOf(330), kosher: true, map: "https://maps.apple.com/?q=300+Gordons+Corner+Rd+Manalapan+NJ", ...loc(330) },
+    ];
+
+    const reel = (u) => { const m = (u || '').trim().match(/instagram\.com\/(reel|reels|p|tv)\/([A-Za-z0-9_-]+)/); return m ? { has: true, empty: false, embed: 'https://www.instagram.com/' + (m[1] === 'reels' ? 'reel' : m[1]) + '/' + m[2] + '/embed/' } : { has: false, empty: true, embed: '' }; };
+    return { statusText, statusDot, marquee, badge, tabs, items: this.menu[this.state.tab], flavors, locations, showMarquee: this.props.showMarquee ?? true, reel1: reel(this.props.reel1), reel2: reel(this.props.reel2), reel3: reel(this.props.reel3), reel4: reel(this.props.reel4) };
+  }
+}
+</script>
+</body>
+</html>
